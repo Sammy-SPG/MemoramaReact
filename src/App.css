@@ -1,3 +1,7 @@
+body {
+  background: #2980B9;
+}
+
 .App {
   text-align: center;
 }
@@ -28,10 +32,55 @@
   color: #61dafb;
 }
 
+.containerCard-grid {
+  width: 85%;
+  margin: auto;
+  margin-top: 10vh;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+
+.memoBlock-inner {
+  height: 18vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3498DB;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.memoBlock-front, .memoBlock-back {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 4px;
+}
+
+.memoBlock-back{
+  width: 80%;
+  height: 80%;
+  background-color: #1ABC9C;
+  transform: rotateY(180deg);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+}
+
+.memoBlock-flipedd{
+  transform: rotateY(180deg);
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
